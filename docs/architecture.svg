@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="486" viewBox="0 0 1280 486">
+  <style>
+    .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+    .s{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+    .box{fill:#18181b;stroke:#2e2e33;stroke-width:1.5}
+    .hot{fill:#1c1410;stroke:#f97316;stroke-width:1.5}
+    .t{fill:#fafafa;font-size:19px}
+    .d{fill:#a1a1aa;font-size:17px}
+    .l{fill:#a1a1aa;font-size:16px}
+    .a{stroke:#52525b;stroke-width:2;fill:none;marker-end:url(#h)}
+    .ao{stroke:#f97316;stroke-width:2;fill:none;marker-end:url(#ho)}
+    .flow{stroke:#fdba74;stroke-width:2;fill:none;stroke-dasharray:3 13;animation:f 1s linear infinite}
+    @keyframes f{to{stroke-dashoffset:-16}}
+  </style>
+  <defs>
+    <marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#52525b"/></marker>
+    <marker id="ho" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f97316"/></marker>
+  </defs>
+  <rect x=".75" y=".75" width="1278.5" height="484.5" rx="23.5" fill="#111113" stroke="#26262a" stroke-width="1.5"/>
+  <text x="32" y="50" class="m" font-size="17" fill="#f97316">~/architecture</text>
+  <rect class="box" x="32" y="92" width="212" height="92" rx="16"/>
+  <text x="52" y="132" class="m t">simulator</text><text x="52" y="161" class="s d">kafka_stream.py</text>
+  <rect class="box" x="283" y="92" width="212" height="92" rx="16"/>
+  <text x="303" y="132" class="m t">redpanda</text><text x="303" y="161" class="s d">topic: transactions</text>
+  <rect class="hot" x="534" y="92" width="212" height="92" rx="16"/>
+  <text x="554" y="132" class="m t">fraud_detection</text><text x="554" y="161" class="s d">XGBoost, ~1.9 ms</text>
+  <rect class="box" x="785" y="92" width="212" height="92" rx="16"/>
+  <text x="805" y="132" class="m t">postgres</text><text x="805" y="161" class="s d">predictions, labels</text>
+  <rect class="box" x="1036" y="92" width="212" height="92" rx="16"/>
+  <text x="1056" y="132" class="m t">dashboard</text><text x="1056" y="161" class="s d">Streamlit</text>
+  <path class="ao" d="M246 138H280"/><path class="ao" d="M497 138H531"/><path class="ao" d="M748 138H782"/><path class="a" d="M999 138H1033"/>
+  <path class="flow" d="M246 138H275M497 138H526M748 138H777"/>
+  <rect class="box" x="534" y="306" width="212" height="92" rx="16"/>
+  <text x="554" y="346" class="m t">mlflow</text><text x="554" y="375" class="s d">model registry</text>
+  <rect class="box" x="785" y="306" width="212" height="92" rx="16"/>
+  <text x="805" y="346" class="m t">retraining</text><text x="805" y="375" class="s d">≥ 500 labels</text>
+  <rect class="box" x="1036" y="306" width="212" height="92" rx="16"/>
+  <text x="1056" y="346" class="m t">labels</text><text x="1056" y="375" class="s d">delayed chargebacks</text>
+  <path class="a" d="M891 186V303"/><text x="903" y="251" class="s l">labelled rows</text>
+  <path class="a" d="M640 304V187"/><text x="652" y="251" class="s l">hot reload</text>
+  <path class="a" d="M783 352H749"/><text x="765.5" y="428" class="s l" text-anchor="middle">register + promote</text>
+  <path class="a" d="M1172 304L967 187"/><text x="1076" y="251" class="s l">isReallyFraud</text>
+  <text x="32" y="460" class="s" font-size="15" fill="#52525b">docker compose runs every service except the simulator · retraining runs every 10 min, or on demand with POST /retrain</text>
+</svg>
